@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <ImageButton
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_dehaze_black_24dp"
+            android:layout_gravity="center_horizontal|left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сообщения"
+            android:textSize="21sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textView" />
+        <ImageButton
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:layout_gravity="center_horizontal|right"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_search_black_24dp"/>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="У Вас пока нет сообщений"
+            style="?attr/textViewStyle"
+            android:layout_gravity="center"
+
+            android:id="@+id/text"/>
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            style="?attr/buttonMainStyle"
+            android:text="Написать сообщение"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="@dimen/default_icon_size"
+        android:layout_height="@dimen/default_icon_size"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@mipmap/ic_edit_white"/>
+</FrameLayout>
